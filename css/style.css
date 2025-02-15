@@ -1,0 +1,115 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Root variables */
+
+body {
+  background-color:white;
+
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.nav-link {
+  color: #a1a1a3;
+  font-weight: bold;
+  font-size: 0.875rem; /* 14px */
+}
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --link-color: #007bff; /* Default Bootstrap link color */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --link-color: #00aaff; /* Lighter blue for dark mode links */
+}
+
+
+
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+#header-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.image-thumbnail {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.image-thumbnail:hover {
+  transform: scale(1.1);
+}
+header {
+  height: 90vh;
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain 10%;
+}
+.buy-now-btn {
+    background: linear-gradient(90deg, silver, gray);
+    border-radius: 19px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    border: none;
+    width: 10rem;
+    height: 3rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
+.buy-now-btn:hover {
+    background: linear-gradient(270deg, gray, silver);
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+footer {
+  height: 30vh;
+  background-color: #000000;
+  position: relative;
+}
+
+.outside-footer {
+  position: relative;
+  margin-top: -80px; /* Adjust this value to control how far the image extends outside */
+  z-index: 1; /* Ensure the image stays visible above the footer */
+}
